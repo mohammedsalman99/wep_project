@@ -1,0 +1,241 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 100px;
+    background-color: #F2FFE9;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+.nav .logo h1{
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #000000;
+}
+.nav .logo b{
+    color: #FA7070;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li{
+    margin-right: 30px;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+.nav ul li a:hover{
+    color: #FA7070;
+}
+
+/*active*/
+.nav ul .active::after{
+    content: '';
+    width: 50%;
+    height: 3px;
+    background-color: #FA7070;
+    display: flex;
+    position: relative;
+    margin-left: 10px;
+}
+
+
+
+/*input*/
+button{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.login-btn{
+    background-color: #FA7070;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+/*content*/
+
+
+::-webkit-scrollbar{
+    width:10px;
+
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: #FA7070;
+}
+.container{
+    width: 1000px;
+    margin: auto;
+    transition: 0.5s;
+
+ }
+header{
+    display: grid;
+    grid-template-columns: 1fr 5px;
+    margin-top: 50px;
+}
+header .shopping{
+    position: relative;
+    text-align: right;
+}
+header .shopping img{
+    width: 40px;
+
+}
+header .shopping span{
+    background-color: red;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 38px;
+    padding: 1px 6px;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+
+.card{
+    position: fixed;
+    top: 66px;
+    left:100% ;
+    width: 500px;
+    background-color: #453E3B;
+    height:100vh;
+    transition: 0.5s;
+}
+.card h1{
+    color: #FA7070;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.card .checkOut{
+    position: absolute;
+    bottom:60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card .checkOut div{
+    background-color: #FA7070;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+
+
+}
+.card .checkOut div:nth-child(2){
+    background-color: #1C1F25;
+    color: #fff;
+}
+
+.active .card{
+    left: calc(100% - 500px);
+}
+
+.active .container{
+    transform: translateX(-200px);
+}
+
+
+.list .item{
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 20px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+}
+
+.list .item img{
+    position: relative;
+    width: 100%;
+    height: 280px;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+}
+.list .item .title{
+    font-weight: 600;
+}
+.list .item .price{
+    margin: 10px;
+    font-size: 18px;
+}
+.list .item button{
+    background-color: #FA7070;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+.list .item button:hover{
+    background: red;
+}
+
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.listCard li img{
+    width: 65%;
+}
+.listCard li button{
+    background-color: #fff5;
+    border: none;
+}
+.listCard .count{
+    margin: 0 10px;
+}
+
+.card .checkOut #OrderForm button{
+    background-color: #FA7070;
+    width: 200%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+
+}

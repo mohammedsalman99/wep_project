@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+   <script src="script.js" defer></script>
+
+  <title>IFood</title>
+</head>
+<style>
+  #ooo {
+    cursor: pointer;
+  }
+</style>
+<script>
+  function ifemployee() {
+    if (sessionStorage.getItem("level") == 2)
+      document.location.href = "orders.html";
+    else
+      alert("only for employees");
+  }
+</script>
+<body>
+
+<div class="blur-bg-overlay">
+
+</div>
+
+<div class="form-popup">
+  <span class="close-btn material-symbols-rounded">close</span>
+  <div class="form-box login">
+    <div class="form-details">
+      <h2>Welcome Back</h2>
+      <p> Please log in using your personal information to stay connected with us.</p>
+    </div>
+    <div class="form-content">
+      <h2>LOGIN</h2>
+
+
+
+      <form id="signInForm" action="sin.php" method="post">
+        <div class="input-field">
+          <input ttype="text" id="username" name="username" required>
+          <label>User Name</label>
+        </div>
+
+        <div class="input-field">
+          <input type="password" id="password" name="password" required>
+          <label>Password</label>
+        </div>
+        <a href="#" class="forgot-pass">Forgot password?</a>
+        <button type="submit">Log In</button>
+      </form>
+
+
+
+      <div class="bottom-link">
+        Don't have an account?
+        <a href="#" id="signup-link">Signip</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="form-box signup">
+    <div class="form-details">
+      <h2>Create Account</h2>
+      <p> To become a part of our community, please sign up using your personal information.</p>
+    </div>
+    <div class="form-content">
+      <h2>SIGNUP</h2>
+
+
+
+      <form id="signUpForm" action="signup.php" method="post">
+        <div class="input-field">
+          <input type="text" id="usernamee" name="usernamee" required>
+          <label>User Name</label>
+        </div>
+
+        <div class="input-field">
+          <input type="password" id="passwordd" name="passwordd" required>
+          <label>Create Password</label>
+        </div>
+
+        <div class="input-field">
+          <input type="text" id="fullName" name="fullName" required>
+          <label>Full Name</label>
+        </div>
+
+        <div class="input-field">
+          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+          <label>Phone Number</label>
+        </div>
+
+
+        <div class="policy-text">
+          <input type="checkbox" id="policy">
+          <label for="policy">
+            I agree the
+            <a href="#">Terms & Conditions</a>
+          </label>
+        </div>
+        <button type="submit"> Sign Up</button>
+      </form>
+
+
+
+      <div class="bottom-link">
+        Already have an account?
+        <a href="#" id="login-link">Login</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section class="menu">
+  <div class="nav">
+
+    <div class="logo">
+      <h1>Call<b>Food</b></h1>
+    </div>
+
+    <ul>
+      <li> <a class="active" href="index.html">Home</a> </li>
+      <li> <a  href="menu.html">Menu</a> </li>
+
+      <li> <a  href="about.html">About us</a> </li>
+      <li> <a  href="gallery.html">Gallery</a> </li>
+      <li> <a id="ooo"  onclick="ifemployee()">Orders</a> </li>
+
+    </ul>
+    <div>
+     <button class="login-btn" id="userr">LOG IN</button>
+
+    </div>
+  </div>
+
+
+</section>
+
+
+<section  class="grid">
+  <div class="content">
+    <div class="content-left">
+      <div class="info">
+        <h2>Are you hungry? <br> Don't wait!</h2>
+        <p>Hey, Our delicious is waiting for you, <br>
+          let start to order food now. </p>
+      </div>
+      <a href="menu.html">
+        <button>Explore Food</button>
+      </a>
+
+
+    </div>
+
+
+
+    <div class="content-right">
+      <img src="read.jpg" alt="">
+    </div>
+
+  </div>
+
+
+</section>
+
+
+<section class="category">
+  <div class="list-items">
+    <h3> Popular Dishes</h3>
+    <div class="card-list">
+      <div class="card">
+        <img src="burgger.jpg" alt="">
+        <div class="food-title">
+          <h1>Beef Burger</h1>
+        </div>
+        <div class="desc-food">
+          <p>contain no ham. The patty is often made from ground beef</p>
+        </div>
+        <div class="price">
+          <span>$10.99</span>
+
+
+        </div>
+
+      </div>
+
+
+
+
+      <div class="card">
+        <img src="french.jpg" alt="">
+        <div class="food-title">
+          <h1>French Fries</h1>
+        </div>
+        <div class="desc-food">
+          <p>contain no ham. The patty is often made from ground beef</p>
+        </div>
+        <div class="price">
+          <span>$15.99</span> <span></span>
+        </div>
+
+      </div>
+
+
+
+      <div class="card">
+        <img src="chicken.webp" alt="">
+        <div class="food-title">
+          <h1>Chicken</h1>
+        </div>
+        <div class="desc-food">
+          <p>contain no ham. The patty is often made from ground beef</p>
+        </div>
+        <div class="price">
+          <span>$20.99</span> <span></span>
+        </div>
+
+      </div>
+
+
+
+
+      <div class="card">
+        <img src="friedchecken.jpg" alt="">
+        <div class="food-title">
+          <h1>Fried Chicken</h1>
+        </div>
+        <div class="desc-food">
+          <p>contain no ham. The patty is often made from ground beef</p>
+        </div>
+        <div class="price">
+          <span>$20.99</span> <span></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+<script src="gloobal.js"></script>
+</body>
+</html>

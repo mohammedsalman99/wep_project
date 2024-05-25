@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <title>IFood</title>
+</head>
+<style>
+  #ooo {
+    cursor: pointer;
+  }
+</style>
+<script>
+  function ifemployee() {
+    if (sessionStorage.getItem("level") == 2)
+      document.location.href = "orders.html";
+    else
+      alert("only for employees");
+  }
+</script>
+<body>
+
+
+
+<section class="menu">
+  <div class="nav">
+
+    <div class="logo">
+      <h1>Call<b>Food</b></h1>
+    </div>
+
+    <ul>
+      <li> <a  href="index.html">Home</a> </li>
+      <li> <a  href="menu.html">Menu</a> </li>
+      <li> <a class="active" href="about.html">About us</a> </li>
+      <li> <a  href="gallery.html">Gallery</a> </li>
+      <li> <a id="ooo"  onclick="ifemployee()">Orders</a> </li>
+
+    </ul>
+    <div>
+      <button class="login-btn" id="userr" onclick="gohome()">LOG IN</button>
+
+    </div>
+  </div>
+
+
+</section>
+
+
+
+<div class="about-us">
+  <div class="container">
+    <div class="row">
+      <div class="flex">
+        <h2> About Us</h2>
+        <h3> Discover Our Team's Story</h3>
+        <p>
+          we are two student in nnu uni,we take web course, and we make this website for this course,
+          the first student is mohammed anwar salman and his age 22,the second student is mohammed najjar abd his age
+          is 22,we  from 2019 in univercity ,and we hope to qraduate in this year insallah,
+          we hope to make great and responsive website usnig html and css and javascript for front end.
+
+        </p>
+        <div class="social-links">
+
+          <a href=""><i class="fab fa-facebook-f"></i> </a>
+          <a href=""><i class="fab fa-twitter"></i> </a>
+          <a href=""><i class="fab fa-instagram"></i> </a>
+
+        </div>
+        <a href="" class="btn">Learn More</a>
+      </div>
+      <div class="flex">
+        <img src="about.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="gloobal.js"></script>
+</body>
+</html>

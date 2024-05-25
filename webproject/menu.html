@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="menu.css">
+  <script src="munu.js" defer></script>
+
+
+  <title>IFood</title>
+</head>
+<style>
+  #ooo {
+    cursor: pointer;
+  }
+</style>
+<script>
+  function ifemployee() {
+    if (sessionStorage.getItem("level") == 2)
+      document.location.href = "orders.html";
+    else
+      alert("only for employees");
+  }
+</script>
+<body>
+
+
+
+
+
+
+
+<section class="menu">
+  <div class="nav">
+
+    <div class="logo">
+      <h1>Call<b>Food</b></h1>
+    </div>
+
+    <ul>
+      <li> <a  href="index.html">Home</a> </li>
+      <li> <a class="active"  href="menu.html">Menu</a> </li>
+
+      <li> <a  href="about.html">About us</a> </li>
+      <li> <a  href="gallery.html">Gallery</a> </li>
+      <li> <a id="ooo"  onclick="ifemployee()">Orders</a> </li>
+
+    </ul>
+    <div>
+      <button class="login-btn" id="userr" onclick="gohome()">LOG IN</button>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <header>
+    <h1>Your Shopping Cart</h1>
+     <div class="shopping">
+       <img src="shopping.svg">
+       <span class="quantity">0</span>
+     </div>
+
+  </header>
+  <div class="list"></div>
+</div>
+<div class="card">
+  <h1>Card</h1>
+  <ul class="listCard"></ul>
+  <div class="checkOut">
+    <div class="total" id="totaloforder">0</div>
+    <div class="closeShopping">Close</div>
+
+    <form id="OrderForm" action="order.php" method="post">
+      <input type="hidden" id="customerNameField" name="customerName">
+      <input type="hidden" id="orderTotal" name="orderTotal">
+      <input type="hidden" id="items" name="items">
+      <input type="hidden" id="quantities" name="quantities">
+
+      <button type="submit">Order</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+<script src="gloobal.js"></script>
+</body>
+</html>

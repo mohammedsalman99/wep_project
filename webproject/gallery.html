@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="gallery.css">
+
+
+  <title>IFood</title>
+</head>
+<style>
+  #ooo {
+    cursor: pointer;
+  }
+</style>
+<script>
+  function ifemployee() {
+    if (sessionStorage.getItem("level") == 2)
+      document.location.href = "orders.html";
+    else
+      alert("only for employees");
+  }
+</script>
+<body>
+
+<section class="menu">
+  <div class="nav">
+
+    <div class="logo">
+      <h1>Call<b>Food</b></h1>
+    </div>
+
+    <ul>
+      <li> <a  href="index.html">Home</a> </li>
+      <li> <a  href="menu.html">Menu</a> </li>
+      <li> <a  href="about.html">About us</a> </li>
+      <li> <a class="active" href="gallery.html">Gallery</a> </li>
+      <li> <a id="ooo"  onclick="ifemployee()">Orders</a> </li>
+
+    </ul>
+    <div>
+      <button class="login-btn" id="userr" onclick="gohome()">LOG IN</button>
+
+    </div>
+  </div>
+
+
+</section>
+
+
+
+<section class="section-2">
+  <h1 class="section-heading">Gallery</h1>
+  <div class="gallery">
+    <a href="menu.html" class="gallery-link" title="order now">
+      <img src="pancakes.jpg" class="food-img">
+      <h3 class="food-name">Pancakes</h3>
+      <p class="food-description">is a flat cake,
+         prepared from a starch-based batter that may contain eggs,
+         milk and butter and cooked on a hot surface,
+        often frying with oil or butter.</p>
+    </a>
+    <a href="menu.html" class="gallery-link" title="order now">
+      <img src="cupcakes.jpg" class="food-img">
+      <h3 class="food-name">Cupcakes</h3>
+      <p class="food-description">is a small cake designed to serve one person,
+        which may be baked in a small thin paper or aluminum cup.</p>
+    </a>
+    <a href="menu.html" class="gallery-link" title="order now">
+      <img src="hummus.jpg" class="food-img">
+      <h3 class="food-name">Hummus</h3>
+      <p class="food-description">mashed chickpeas blended with tahini,
+        lemon juice, and garlic,
+        includes olive oil,
+        a few whole chickpeas, parsley, and paprika</p>
+    </a>
+    <a href="menu.html" class="gallery-link" title="order now">
+      <img src="burger.jpg" class="food-img">
+      <h3 class="food-name">Hamburger</h3>
+      <p class="food-description">ground meat, typically beef—placed inside a sliced bun or bread roll.
+        Hamburgers are often served with cheese, lettuce, tomato, onion, pickles, bacon.</p>
+    </a>
+    <a href="menu.html" class="gallery-link" title="order now">
+      <img src="salmon.jpg" class="food-img">
+      <h3 class="food-name">Salmon</h3>
+      <p class="food-description">food fish classified as an oily fish with a rich
+        content of protein and omega-3 fatty acids. .</p>
+    </a>
+    <a href="menu.html" class="gallery-link" title="order now">
+      <img src="vege.jpg" class="food-img">
+      <h3 class="food-name">Vegetables</h3>
+      <p class="food-description">any kind of plant life or plant product; in common usage,
+        the term usually refers to the fresh edible portions of certain herbaceous plants.</p>
+    </a>
+
+
+
+  </div>
+
+
+
+  <script src="gloobal.js"></script>
+</section>
+</body>
+</html>
